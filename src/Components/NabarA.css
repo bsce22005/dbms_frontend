@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(31, 31, 31, 0.8); /* Transparent background */
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Optional: Change background when scrolled */
+  .navbar.scrolled {
+    background-color: rgba(31, 31, 31, 1); /* Solid when scrolled */
+  }
+  
+  .navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding: 0.5rem;
+  }
+  
+  .navbar-links a:hover {
+    color: #ddd;
+  }
+  
+  /* Styling for Sign-In button */
+  .log {
+    padding: 0.5rem 1rem;
+    background-color:yellow;
+    color: black;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .log:hover {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-line {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: rgba(31, 31, 31, 0.9);
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  }
+  
